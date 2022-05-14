@@ -34,3 +34,11 @@ mkdocs build
 ```bash
 conda deactivate
 ```
+
+If a new code is push to `main` or `master` CI pipeline (`.github/workflows/ci.yml`) will deploy this in GitHub pages. If you want to deploy site manually,
+
+```bash
+mkdocs gh-deploy --force
+```
+
+will deploy the latest changes from any branch to GitHub pages. 
