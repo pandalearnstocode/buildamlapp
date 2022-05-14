@@ -2,6 +2,8 @@
 
 [![Publish docs via GitHub Pages](https://github.com/pandalearnstocode/buildamlapp/actions/workflows/ci.yml/badge.svg)](https://github.com/pandalearnstocode/buildamlapp/actions/workflows/ci.yml)
 
+URL: https://pandalearnstocode.github.io/buildamlapp/
+
 ```bash
 conda create --name buildamlapp python=3.8
 conda activate buildamlapp
