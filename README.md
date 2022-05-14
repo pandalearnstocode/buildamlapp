@@ -1,5 +1,6 @@
 # Build a ML app
 
+[![Publish docs via GitHub Pages](https://github.com/pandalearnstocode/buildamlapp/actions/workflows/ci.yml/badge.svg)](https://github.com/pandalearnstocode/buildamlapp/actions/workflows/ci.yml)
 
 ```bash
 conda create --name buildamlapp python=3.8
