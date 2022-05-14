@@ -1,4 +1,4 @@
-# buildamlapp
+# Build a ML app
 
 
 ```bash
