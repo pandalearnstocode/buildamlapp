@@ -42,3 +42,10 @@ mkdocs gh-deploy --force
 ```
 
 will deploy the latest changes from any branch to GitHub pages. 
+
+
+Use the follow command to rebase with a target branch (master in this case),
+
+```bash
+git rebase origin/master
+```
