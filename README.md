@@ -44,6 +44,24 @@ mkdocs gh-deploy --force
 will deploy the latest changes from any branch to GitHub pages. 
 
 
+After the initial project is generated, the project folder will be as follows,
+
+```bash
+.
+├── docs
+│   └── index.md
+├── mkdocs.yml
+├── README.md
+├── requirements.txt
+└── site
+    ├── 404.html
+    ├── assets
+    ├── index.html
+    ├── search
+    ├── sitemap.xml
+    └── sitemap.xml.gz
+```
+
 Use the follow command to rebase with a target branch (master in this case),
 
 ```bash
