@@ -1,10 +1,11 @@
 site_name: Test docs
-site_description: 'A docs test'
-site_author: 'Michael Hausenblas'
+site_description: "A docs test"
+site_author: "Michael Hausenblas"
 docs_dir: docs/
-repo_name: 'mhausenblas/mkdocs-template'
-repo_url: 'https://github.com/mhausenblas/mkdocs-template'
+repo_name: "mhausenblas/mkdocs-template"
+repo_url: "https://github.com/mhausenblas/mkdocs-template"
 nav:
-    - Home: index.md
+  - Home: index.md
+  - DB: sql_vs_no_sql.md
 theme:
-  name: 'material'
+  name: "material"
