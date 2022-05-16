@@ -18,3 +18,9 @@ plugins:
       css_style:
         width: "80%"
         height: "30.172vw"
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
