@@ -10,3 +10,7 @@ nav:
   - 'Session 1' : introduction_to_web_apps_crud_rest_apis.md
 theme:
   name: "material"
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
