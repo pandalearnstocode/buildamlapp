@@ -80,7 +80,7 @@ __Note:__ This has nothing to do with your GitHub login. To login to GitHub you 
 
 &nbsp;
 
-![type:video](https://www.youtube.com/watch?v=G-OAVLBFxbw)
+![type:video](https://www.youtube.com/embed/G-OAVLBFxbw)
 
 ## __Reference__:
 
