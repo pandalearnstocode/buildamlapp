@@ -1,13 +1,12 @@
-site_name: Test docs
+site_name: Build a ML app
 site_description: "A docs test"
-site_author: "Michael Hausenblas"
+site_author: "Ashit, Aritra, Pragyan"
 docs_dir: docs/
-repo_name: "mhausenblas/mkdocs-template"
-repo_url: "https://github.com/mhausenblas/mkdocs-template"
+repo_name: "pandalearnstocode/buildamlapp"
+repo_url: "https://github.com/pandalearnstocode/buildamlapp"
 nav:
-  - Home: index.md
-  - DB: sql_vs_no_sql.md
-  - 'Session 1' : introduction_to_web_apps_crud_rest_apis.md
+  - 'Home': index.md
+  - 'Web app & APIs' : introduction_to_web_apps_crud_rest_apis.md
 theme:
   name: "material"
 extra_css:
