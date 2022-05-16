@@ -6,7 +6,7 @@ repo_name: "pandalearnstocode/buildamlapp"
 repo_url: "https://github.com/pandalearnstocode/buildamlapp"
 nav:
   - 'Home': index.md
-  - 'Web app, REST APIs & setup' : introduction_to_web_apps_crud_rest_apis.md
+  - 'Web app, REST APIs & setup' : 01_introduction_to_web_apps_crud_rest_apis.md
 theme:
   name: "material"
 extra_css:
