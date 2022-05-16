@@ -9,6 +9,8 @@ nav:
   - 'Web app, REST APIs & setup' : 01_introduction_to_web_apps_crud_rest_apis.md
 theme:
   name: "material"
+  features:
+    - content.code.annotate
 extra_css:
   - stylesheets/extra.css
 extra_javascript:
