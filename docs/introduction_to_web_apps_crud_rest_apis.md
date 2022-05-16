@@ -1,4 +1,6 @@
-# Introduction to web apps, CRUD & REST APIs
+# __Introduction to web apps, CRUD & REST APIs__
+
+## __Topics to be discussed during this session:__
 
 Here in this session we are going to discuss the following topics,
 
