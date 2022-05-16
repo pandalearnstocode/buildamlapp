@@ -26,9 +26,48 @@ Here in this session we are going to discuss the following topics,
 
 ## __System setup:__
 
-* Install anaconda
-* Install git
-* Setup git
+### __Install anaconda:__
+
+Here for most of our work we are going to use Ubuntu. To install anacona in a Ubuntu system, either download the latest anaconda installation scipt from the official website and install using `bash <https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh>`. To download and run the anaconda from terminal execute the following set of commands,
+
+```bash
+sudo apt update  -y 
+sudo apt install curl -y
+curl --output anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+bash anaconda.sh 
+source ~/.bashrc
+conda list 
+conda update --all
+```
+__Note:__ Here we are using `https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh` url, because this is the latest version. Check the latest version from [this](https://www.anaconda.com/products/distribution#linux) url while doing the setup.
+
+While installing make sure that the `PATH` of anaconda is registered in `.bashrc`. It will ensure that whenever you are executing `conda` from terminal your OS knows when conda is located. If everything goes well run the following commands to create a virtual env name as `tou_app`,
+
+```bash
+conda create --name toy_app python=3.8
+conda activate toy_app
+pip install pandas jupyter notebook
+conda deactivate
+```
+If the above lines work, you have a conda env called `toy_app` with python 3.8. Also you have pandas and jupyter notebook installed in the same.
+
+
+## __Install git__
+
+```bash
+sudo apt install git-all
+```
+Execute the above line to install `git` in your system. After installing configure your user name and email in git using the following commands,
+
+```bash
+git config --global user.name "Aritra Biswas"
+git config --global user.email pandalearnstocode@gmail.com
+```
+
+__Note:__ This has nothing to do with your GitHub login. To login to GitHub you need use your PAT. You can register RSA token so that everytime you make a push you do not need to enter user name and PAT. Since, we are going to use VS Code this will not be required.
+
+
+
 * Install VS Code
 * Install VS Code extensions
 * Install Docker
