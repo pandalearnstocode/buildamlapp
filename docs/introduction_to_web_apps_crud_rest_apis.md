@@ -76,7 +76,11 @@ __Note:__ This has nothing to do with your GitHub login. To login to GitHub you 
 ## __Creating virtual envs:__
 
 
-## __`pipenv` as alternative of conda__
+## __`poetry` as alternative of conda__
+
+&nbsp;
+
+![type:video](https://www.youtube.com/watch?v=G-OAVLBFxbw)
 
 ## __Reference__:
 
