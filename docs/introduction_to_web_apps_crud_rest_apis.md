@@ -21,7 +21,7 @@ Here in this session we are going to discuss the following topics,
 
 &nbsp;
 
-![type:video](https://www.youtube.com/embed/_KL52Z_-j1Y){.center }
+![type:video](https://www.youtube.com/embed/_KL52Z_-j1Y)
 
 
 ## __System setup:__
