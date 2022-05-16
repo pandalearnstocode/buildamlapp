@@ -82,7 +82,7 @@ __Note:__ This has nothing to do with your GitHub login. To login to GitHub you 
 
 ![type:video](https://www.youtube.com/embed/G-OAVLBFxbw)
 
-### why we should use `poetry`?
+### __Why we should use `poetry`?__
 
 `poetry` is very useful from two points,
 
@@ -90,7 +90,7 @@ __Note:__ This has nothing to do with your GitHub login. To login to GitHub you 
 * poetry is good for building and distributing python libraries
 
 
-### Some useful poetry commands
+### __Some useful `poetry` commands__
 
 ```bash
 # Download poetry in Ubuntu
