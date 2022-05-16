@@ -16,3 +16,6 @@ extra_javascript:
   - javascripts/extra.js
 plugins:
   - mkdocs-video
+      css_style:
+        width: "80%"
+        height: "30.172vw"
