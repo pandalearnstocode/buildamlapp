@@ -22,3 +22,26 @@ Here in this session we are going to discuss the following topics,
 &nbsp;
 
 ![type:video](https://www.youtube.com/embed/_KL52Z_-j1Y){.center }
+
+
+## __System setup:__
+
+* Install anaconda
+* Install git
+* Setup git
+* Install VS Code
+* Install VS Code extensions
+* Install Docker
+* Install Docker Compose
+
+## __Creating virtual envs:__
+
+
+## __`pipenv` as alternative of conda__
+
+## __Reference__:
+
+* [Reading list 1](https://www.google.com/)
+* [Reading list 1](https://www.google.com/)
+* [Reading list 1](https://www.google.com/)
+* [Reading list 1](https://www.google.com/)
