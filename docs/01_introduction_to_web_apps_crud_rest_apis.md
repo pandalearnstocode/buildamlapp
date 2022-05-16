@@ -82,6 +82,37 @@ __Note:__ This has nothing to do with your GitHub login. To login to GitHub you 
 
 ![type:video](https://www.youtube.com/embed/G-OAVLBFxbw)
 
+### why we should use `poetry`?
+
+`poetry` is very useful from two points,
+
+* poetry can easily work with multiple version of python
+* poetry is good for building and distributing python libraries
+
+
+### Some useful poetry commands
+
+```bash
+# Download poetry in Ubuntu
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+source $HOME/.poetry/env                                    # Add to PATH
+poetry --version                                            # Check version of poetry
+poetry self update                                          # Update version
+poetry new project1                                         # Create a new project
+cd project1
+tree . 
+poetry run pytest                                           # Run pytest for the project
+poetry add pandas                                           # Add a package as dependency of a project
+poetry remove pandas                                        # Delete a project from the file
+poetry add --dev pytest                                     # Add a package as dev dependency in a poetry project
+poetry add -D coverage[toml] pytest-cov                     # --dev & -D same
+poetry install                                              # Install all the dependencies for a project
+poetry build                                                # Build a python library using poetry
+poetry publish                                              # Publish library to PyPI
+poetry export - requirements.txt --output requirements.txt  # Generate requirements.txt
+poetry use python3.8                                        # Use specific version of python in the project
+```
+
 ## __Reference__:
 
 * [Reading list 1](https://www.google.com/)
