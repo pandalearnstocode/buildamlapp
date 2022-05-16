@@ -15,5 +15,8 @@ Here in this session we are going to discuss the following topics,
 * Installation of git
 * VS Code extensions and usage
 
+## __Session 1: Introduction Web App, CRUD & REST APIs__
 
-![type:video](https://www.youtube.com/embed/_KL52Z_-j1Y)
+&nbsp;
+
+![type:video](https://www.youtube.com/embed/_KL52Z_-j1Y){.center }
