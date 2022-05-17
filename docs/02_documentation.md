@@ -91,6 +91,14 @@ jobs:
 
 Now when ever there is some new code checked in to `master` it will build the static site and push it to `gh-pages` branch and will be deployed to GitHub pages. In addition to this you may have to enable GitHub pages. Set the brand to `gh-pages` and directory should be root.
 
+### __Manual deployment__
+
+If you want to directly build and push changes to GitHub pages, run the following command,
+
+```bash
+mkdocs gh-deploy --force
+```
+
 ## __Library API documentation__
 
 ### __MKDocstring: A MKDocs plugin to for Library API documentation__
