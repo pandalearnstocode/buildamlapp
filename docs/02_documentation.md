@@ -185,3 +185,12 @@ To show any particular function in a markdown page, add the following block to t
 ### __Endpoint level docs__
 
 ### __Adding sample request and response schema__
+
+
+## __Reference__
+
+* [Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/)
+* [Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/)
+* [Additional Responses in OpenAPI](https://fastapi.tiangolo.com/advanced/additional-responses/)
+* [How to Document a FastAPI App with OpenAPI](https://www.linode.com/docs/guides/documenting-a-fastapi-app-with-openapi/)
+* [Metadata and Additional Responses in FastAPI](https://betterprogramming.pub/metadata-and-additional-responses-in-fastapi-ea90a321d477)
