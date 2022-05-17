@@ -60,6 +60,37 @@ To add a new page we need to do the following things,
 * Link the file in `nav` section of `mkdocs.yml`
 * After this generate the static content
 
+
+### __CI Pipeline using GitHub actions__
+
+* Create a file `.github/workflows/ci.yml`
+* Copy paste the content from below
+* Create PAT from GitHub
+* Store in it in GitHub secrets with the name `PERSONAL_TOKEN`
+
+```yaml
+name: Publish docs via GitHub Pages
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+```
+
+Now when ever there is some new code checked in to `master` it will build the static site and push it to `gh-pages` branch and will be deployed to GitHub pages. In addition to this you may have to enable GitHub pages. Set the brand to `gh-pages` and directory should be root.
+
 ## __Library API documentation__
 
 ### __MKDocstring: A MKDocs plugin to for Library API documentation__
