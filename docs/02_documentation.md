@@ -8,6 +8,8 @@ Here are some of the key documents which is required for a software engineering 
 
 ## __User guide or Project wiki__
 
+### __Purpose__
+
 ### __Create MKDocs wiki__
 
 
@@ -99,13 +101,80 @@ If you want to directly build and push changes to GitHub pages, run the followin
 mkdocs gh-deploy --force
 ```
 
+### __Additional settings__
+
+* Install [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension in VS Code.
+* Add the following lines in VS Code `settings.json` file,
+
+```json
+{
+  "yaml.schemas": {
+    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+  }
+}
+
+```
+
 ## __Library API documentation__
+
+### __Purpose__
 
 ### __MKDocstring: A MKDocs plugin to for Library API documentation__
 
+When you have a project with MKDocs wiki and you want to add your code documentation along with your project documentation, this process becomes very useful. In oder to do this you need to install [autodocstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring) extension in VS Code. Once this is installed, add the following lines in the `settings.json` file,
+
+
+```json
+{
+    "autoDocstring.docstringFormat": "sphinx"
+}
+```
+
+Here are the list of formatters available in `autodocstring`,
+
+* google
+* sphinx
+* numpy
+* docBlockr
+* one-line-sphinx
+* pep257
+
+Once this is configured write a function with docstring. For example,
+
+
+```python
+# my_library/my_module.py
+
+def my_foo():
+    """This is a docstring example"
+    return "Sample function!!!"
+```
+
 ### __How to use MKDocstring__
 
+Once the above things are done, install the mkdocstring package using,
+
+
+```bash
+pip install mkdocstrings
+```
+
+Add the following lines in `mkdocs.yml` file,
+
+```yaml
+plugins:
+- search
+- mkdocstrings
+```
+To show any particular function in a markdown page, add the following block to the page and it will render the docstring as HTML content in the respective page,
+
+```
+::: my_library.my_module.my_foo
+```
+
 ## __REST API documentation__
+
+### __Purpose__
 
 ### __What is `Swagger UI` and `OpenAPI specifications`__
 
