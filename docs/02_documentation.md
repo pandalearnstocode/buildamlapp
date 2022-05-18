@@ -146,11 +146,16 @@ Once this is configured write a function with docstring. For example,
 
 
 ```python
-# my_library/my_module.py
+# project/hello_world.py
 
-def my_foo():
-    """This is a docstring example"
-    return "Sample function!!!"
+def say_hello_world(name:str)-> str:
+    """Hello world function
+    Args:
+        name (str): persons name
+    Returns:
+        str: say hello to person
+    """
+    return f"Hello {name}!!!!"
 ```
 
 ### __How to use MKDocstring__
@@ -172,7 +177,7 @@ plugins:
 To show any particular function in a markdown page, add the following block to the page and it will render the docstring as HTML content in the respective page,
 
 ```
-::: my_library.my_module.my_foo
+::: project.hello_world.say_hello_world
 ```
 
 ## __REST API documentation__
