@@ -1,0 +1,621 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A docs test">
+      
+      
+        <meta name="author" content="Ashit, Aritra, Pragyan">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.6">
+    
+    
+      
+        <title>Web app, REST APIs & setup - Build a ML app</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9d5733d3.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-web-apps-crud-rest-apis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Build a ML app" class="md-header__button md-logo" aria-label="Build a ML app" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Build a ML app
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Web app, REST APIs & setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pandalearnstocode/buildamlapp/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pandalearnstocode/buildamlapp
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Build a ML app" class="md-nav__button md-logo" aria-label="Build a ML app" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Build a ML app
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pandalearnstocode/buildamlapp/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pandalearnstocode/buildamlapp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Web app, REST APIs & setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Web app, REST APIs & setup
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topics-to-be-discussed-during-this-session" class="md-nav__link">
+    Topics to be discussed during this session:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-1-introduction-web-app-crud-rest-apis" class="md-nav__link">
+    Session 1: Introduction Web App, CRUD &amp; REST APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-setup" class="md-nav__link">
+    System setup:
+  </a>
+  
+    <nav class="md-nav" aria-label="System setup:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-anaconda" class="md-nav__link">
+    Install anaconda:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-git" class="md-nav__link">
+    Install git
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-virtual-envs" class="md-nav__link">
+    Creating virtual envs:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poetry-as-alternative-of-conda" class="md-nav__link">
+    poetry as alternative of conda
+  </a>
+  
+    <nav class="md-nav" aria-label="poetry as alternative of conda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-we-should-use-poetry" class="md-nav__link">
+    Why we should use poetry?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-useful-poetry-commands" class="md-nav__link">
+    Some useful poetry commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topics-to-be-discussed-during-this-session" class="md-nav__link">
+    Topics to be discussed during this session:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-1-introduction-web-app-crud-rest-apis" class="md-nav__link">
+    Session 1: Introduction Web App, CRUD &amp; REST APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-setup" class="md-nav__link">
+    System setup:
+  </a>
+  
+    <nav class="md-nav" aria-label="System setup:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-anaconda" class="md-nav__link">
+    Install anaconda:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-git" class="md-nav__link">
+    Install git
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-virtual-envs" class="md-nav__link">
+    Creating virtual envs:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poetry-as-alternative-of-conda" class="md-nav__link">
+    poetry as alternative of conda
+  </a>
+  
+    <nav class="md-nav" aria-label="poetry as alternative of conda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-we-should-use-poetry" class="md-nav__link">
+    Why we should use poetry?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-useful-poetry-commands" class="md-nav__link">
+    Some useful poetry commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/pandalearnstocode/buildamlapp/edit/master/docs/01_introduction_to_web_apps_crud_rest_apis.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="introduction-to-web-apps-crud-rest-apis"><strong>Introduction to web apps, CRUD &amp; REST APIs</strong></h1>
+<h2 id="topics-to-be-discussed-during-this-session"><strong>Topics to be discussed during this session:</strong></h2>
+<p>Here in this session we are going to discuss the following topics,</p>
+<ul>
+<li>History of web apps</li>
+<li>Introduction of SOAP, REST &amp; GraphQL</li>
+<li>Introduction to JSON</li>
+<li>Structure of a REST API</li>
+<li>REST API frameworks in Python</li>
+<li>Methods of REST APIs</li>
+<li>Usage of status code</li>
+<li>Virtual envs</li>
+<li>Introduction of containerization</li>
+<li>Creating virtual envs using anaconda</li>
+<li>Installation of git</li>
+<li>VS Code extensions and usage</li>
+</ul>
+<h2 id="session-1-introduction-web-app-crud-rest-apis"><strong>Session 1: Introduction Web App, CRUD &amp; REST APIs</strong></h2>
+<p>&nbsp;</p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/_KL52Z_-j1Y" style="width: 80%; height: 30.172vw" frameborder="0" allowfullscreen></iframe></div></p>
+<h2 id="system-setup"><strong>System setup:</strong></h2>
+<h3 id="install-anaconda"><strong>Install anaconda:</strong></h3>
+<p>Here for most of our work we are going to use Ubuntu. To install anacona in a Ubuntu system, either download the latest anaconda installation scipt from the official website and install using <code>bash &lt;https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh&gt;</code>. To download and run the anaconda from terminal execute the following set of commands,</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo apt update  -y 
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo apt install curl -y
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>curl --output anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>bash anaconda.sh 
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">source</span> ~/.bashrc
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>conda list 
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>conda update --all
+</code></pre></div>
+<strong>Note:</strong> Here we are using <code>https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh</code> url, because this is the latest version. Check the latest version from <a href="https://www.anaconda.com/products/distribution#linux">this</a> url while doing the setup.</p>
+<p>While installing make sure that the <code>PATH</code> of anaconda is registered in <code>.bashrc</code>. It will ensure that whenever you are executing <code>conda</code> from terminal your OS knows when conda is located. If everything goes well run the following commands to create a virtual env name as <code>tou_app</code>,</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda create --name toy_app <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>conda activate toy_app
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>pip install pandas jupyter notebook
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>conda deactivate
+</code></pre></div>
+If the above lines work, you have a conda env called <code>toy_app</code> with python 3.8. Also you have pandas and jupyter notebook installed in the same.</p>
+<h2 id="install-git"><strong>Install git</strong></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo apt install git-all
+</code></pre></div>
+Execute the above line to install <code>git</code> in your system. After installing configure your user name and email in git using the following commands,</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git config --global user.name <span class="s2">&quot;Aritra Biswas&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git config --global user.email pandalearnstocode@gmail.com
+</code></pre></div>
+<p><strong>Note:</strong> This has nothing to do with your GitHub login. To login to GitHub you need use your PAT. You can register RSA token so that everytime you make a push you do not need to enter user name and PAT. Since, we are going to use VS Code this will not be required.</p>
+<ul>
+<li>Install VS Code</li>
+<li>Install VS Code extensions</li>
+<li>Install Docker</li>
+<li>Install Docker Compose</li>
+</ul>
+<h2 id="creating-virtual-envs"><strong>Creating virtual envs:</strong></h2>
+<h2 id="poetry-as-alternative-of-conda"><strong><code>poetry</code> as alternative of conda</strong></h2>
+<p>&nbsp;</p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/G-OAVLBFxbw" style="width: 80%; height: 30.172vw" frameborder="0" allowfullscreen></iframe></div></p>
+<h3 id="why-we-should-use-poetry"><strong>Why we should use <code>poetry</code>?</strong></h3>
+<p><code>poetry</code> is very useful from two points,</p>
+<ul>
+<li>poetry can easily work with multiple version of python</li>
+<li>poetry is good for building and distributing python libraries</li>
+</ul>
+<h3 id="some-useful-poetry-commands"><strong>Some useful <code>poetry</code> commands</strong></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Download poetry in Ubuntu</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py <span class="p">|</span> python -
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">source</span> <span class="nv">$HOME</span>/.poetry/env                                    <span class="c1"># Add to PATH</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>poetry --version                                            <span class="c1"># Check version of poetry</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>poetry self update                                          <span class="c1"># Update version</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>poetry new project1                                         <span class="c1"># Create a new project</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nb">cd</span> project1
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>tree . 
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>poetry run pytest                                           <span class="c1"># Run pytest for the project</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>poetry add pandas                                           <span class="c1"># Add a package as dependency of a project</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>poetry remove pandas                                        <span class="c1"># Delete a project from the file</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>poetry add --dev pytest                                     <span class="c1"># Add a package as dev dependency in a poetry project</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>poetry add -D coverage<span class="o">[</span>toml<span class="o">]</span> pytest-cov                     <span class="c1"># --dev &amp; -D same</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>poetry install                                              <span class="c1"># Install all the dependencies for a project</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>poetry build                                                <span class="c1"># Build a python library using poetry</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>poetry publish                                              <span class="c1"># Publish library to PyPI</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>poetry <span class="nb">export</span> - requirements.txt --output requirements.txt  <span class="c1"># Generate requirements.txt</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>poetry use python3.8                                        <span class="c1"># Use specific version of python in the project</span>
+</code></pre></div>
+<h2 id="reference"><strong>Reference</strong>:</h2>
+<ul>
+<li><a href="https://www.google.com/">Reading list 1</a></li>
+<li><a href="https://www.google.com/">Reading list 1</a></li>
+<li><a href="https://www.google.com/">Reading list 1</a></li>
+<li><a href="https://www.google.com/">Reading list 1</a></li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../02_documentation/" class="md-footer__link md-footer__link--next" aria-label="Next: Documentation" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Documentation
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e87a5f81.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
