@@ -6,9 +6,19 @@ Here are some of the key documents which is required for a software engineering 
 2. [MKDocstring](https://github.com/mkdocstrings/mkdocstrings)
 3. [Swagger UI](https://swagger.io/) & [Fast API](https://fastapi.tiangolo.com/)
 
+
+There are majorly three type of documentation needed for a typical software engineering project,
+
+* Project wiki or User guide
+* Code documentation or docstring
+* API documentation
+
 ## __User guide or Project wiki__
 
 ### __Purpose__
+
+__Project wiki or User guide:__ Any general documentation regarding a project can be part of project wiki. We are going to use mkdocs to build and serve project wiki using GitHub pages. Not just the project wiki, it can be used to create a user guide as well. 
+
 
 ### __Create MKDocs wiki__
 
@@ -122,6 +132,8 @@ mkdocs gh-deploy --force
 
 ### __Purpose__
 
+__Code documentation or docstring:__ Any code level documentation has to be captured as part of docstring. This is mainly for developers. All the functions we write may or may not be part of a endpoint or high level service. But in order to understand the inner working of this function this is really important to capture these details as part of the docstring and serve it as part of wiki or any otherwise wherever it is applicable to explain a context.
+
 ### __MKDocstring: A MKDocs plugin to for Library API documentation__
 
 When you have a project with MKDocs wiki and you want to add your code documentation along with your project documentation, this process becomes very useful. In oder to do this you need to install [autodocstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring) extension in VS Code. Once this is installed, add the following lines in the `settings.json` file,
@@ -183,6 +195,10 @@ To show any particular function in a markdown page, add the following block to t
 ## __REST API documentation__
 
 ### __Purpose__
+
+__REST API documentation:__
+
+API documentation is mostly focused on anyone who will be consuming the APIs and will do the integration. For example, if we need to expose a set of APIs to frontend team or any other team for integration, they can quickly take a look into the documentation and understand what is the endpoint doing.
 
 ### __What is `Swagger UI` and `OpenAPI specifications`__
 
