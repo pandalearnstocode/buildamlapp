@@ -12,9 +12,18 @@ There are majorly three type of documentation needed for a typical software engi
 * Project wiki or User guide
 * Code documentation or docstring
 * API documentation
+
+## __Project setup demo__
+
 &nbsp;
 
 ![type:video](https://www.youtube.com/embed/iRDwTsq3ajc)
+
+## __Introduction to MKDocs__
+
+&nbsp;
+
+![type:video](https://www.youtube.com/embed/pzoOQg6BNG4)
 
 ## __User guide or Project wiki__
 
