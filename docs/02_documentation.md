@@ -12,6 +12,9 @@ There are majorly three type of documentation needed for a typical software engi
 * Project wiki or User guide
 * Code documentation or docstring
 * API documentation
+&nbsp;
+
+![type:video](https://www.youtube.com/embed/iRDwTsq3ajc)
 
 ## __User guide or Project wiki__
 
