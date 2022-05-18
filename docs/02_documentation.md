@@ -448,4 +448,4 @@ Check minimal implimentation of above discussed topic [here](https://github.com/
 * [Additional Responses in OpenAPI](https://fastapi.tiangolo.com/advanced/additional-responses/)
 * [How to Document a FastAPI App with OpenAPI](https://www.linode.com/docs/guides/documenting-a-fastapi-app-with-openapi/)
 * [Metadata and Additional Responses in FastAPI](https://betterprogramming.pub/metadata-and-additional-responses-in-fastapi-ea90a321d477)
-* [Sample repository](https://github.com/pandalearnstocode/docs-toy-sample)
+* [MKDocs, MKDocstring and Swagger UI sample repository](https://github.com/pandalearnstocode/docs-toy-sample)
