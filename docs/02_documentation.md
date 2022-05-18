@@ -126,7 +126,7 @@ When you have a project with MKDocs wiki and you want to add your code documenta
 
 ```json
 {
-    "autoDocstring.docstringFormat": "sphinx"
+    "autoDocstring.docstringFormat": "google"
 }
 ```
 
