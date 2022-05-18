@@ -22,11 +22,13 @@ mkdir docs                                    # Create a `docs` dir. Here all th
 cd docs                                       # Navigate to the `docs` dir
 touch index.md                                # Create a `index.md` which will be the landing page of the wiki
 cd ..                                         # Navigate to the project root
+touch requirements.txt                        # Create a dependency file
 ```
 
 Now, in the `mkdocs.yml` file we need to define the landing page of the wiki. In order to do that here in the `nav` section we are saying whenever there is a `GET` call to the landing page render content of `index.md` as HTML page.
 
 ```yaml
+site_name: Wiki
 nav:
     - 'index.md'
 ```
@@ -65,6 +67,7 @@ To add a new page we need to do the following things,
 
 ### __CI Pipeline using GitHub actions__
 
+* Update all the dependencies in `requirements.txt` file.
 * Create a file `.github/workflows/ci.yml`
 * Copy paste the content from below
 * Create PAT from GitHub
@@ -76,7 +79,6 @@ on:
   push:
     branches:
       - master
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -89,6 +91,7 @@ jobs:
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          REQUIREMENTS: requirements.txt
 ```
 
 Now when ever there is some new code checked in to `master` it will build the static site and push it to `gh-pages` branch and will be deployed to GitHub pages. In addition to this you may have to enable GitHub pages. Set the brand to `gh-pages` and directory should be root.
