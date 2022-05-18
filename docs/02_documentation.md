@@ -400,10 +400,13 @@ async def get_user(id: str = Query(..., title="3-digit identity number of the us
         return JSONResponse(status_code=404, content={"message": "User not found!"})
 ```
 
+Deactivate conda env.
 
 ```bash
 conda deactivate
 ```
+Check minimal implimentation of above discussed topic [here](https://github.com/pandalearnstocode/docs-toy-sample).
+
 
 ## __Reference__
 
@@ -412,3 +415,4 @@ conda deactivate
 * [Additional Responses in OpenAPI](https://fastapi.tiangolo.com/advanced/additional-responses/)
 * [How to Document a FastAPI App with OpenAPI](https://www.linode.com/docs/guides/documenting-a-fastapi-app-with-openapi/)
 * [Metadata and Additional Responses in FastAPI](https://betterprogramming.pub/metadata-and-additional-responses-in-fastapi-ea90a321d477)
+* [Sample repository](https://github.com/pandalearnstocode/docs-toy-sample)
